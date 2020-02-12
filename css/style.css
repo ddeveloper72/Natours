@@ -47,6 +47,15 @@ body {
     height: 35px;
 }
 
+.text-box {
+    /* first align the text-box relative to the parent-body element... */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* ...then move the element itself again relative to the fixed top, left x y position */
+    transform: translate(-50%, -50%);
+}
+
 .heading-primary {
     color: #ffffff;
     text-transform: uppercase;
