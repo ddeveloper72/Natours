@@ -54,6 +54,8 @@ body {
     left: 50%;
     /* ...then move the element itself again relative to the fixed top, left x y position */
     transform: translate(-50%, -50%);
+    /* centre the button which is text */
+    text-align: center;
 }
 
 .heading-primary {
@@ -61,6 +63,7 @@ body {
     text-transform: uppercase;
 
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -113,4 +116,26 @@ body {
         opacity: 1;
         transform: translate(0);
     }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 50px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #777;
 }
