@@ -125,14 +125,21 @@ body {
     padding: 15px 40px;
     display: inline-block;
     border-radius: 50px;
+    transition: all .2s;
 }
 
 .btn:hover {
     transform: translateY(-3px);
+    /* x y blur colour with % opacity give the
+    look of the button up above base image */
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
 }
 
 .btn:active {
     transform: translateY(-1px);
+    /* reduce shadow size as well as the blur to give 
+    appearance of button moving close to base image */
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
 
 .btn-white {
