@@ -118,6 +118,18 @@ body {
     }
 }
 
+@keyframes moveInBottom{
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 .btn:link,
 .btn:visited {
     text-transform: uppercase;
@@ -128,6 +140,14 @@ body {
     transition: all .2s;
     /* define button position for  btn-white::after */
     position: relative;
+}
+
+.btn-animated {
+    /* animation timing and delay */
+    animation: moveInBottom .5s ease-out .75s;
+    /* apply styles before the animation starts */
+    animation-fill-mode: backwards;
+    
 }
 
 .btn:hover {
