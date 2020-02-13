@@ -126,6 +126,8 @@ body {
     display: inline-block;
     border-radius: 50px;
     transition: all .2s;
+    /* define button position for  btn-white::after */
+    position: relative;
 }
 
 .btn:hover {
@@ -145,4 +147,29 @@ body {
 .btn-white {
     background-color: #ffffff;
     color: #777;
+}
+
+.btn::after {
+    /* crate a pseudo button to go behind the button */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* btn::after is the initial state for btn:hover::after */
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #ffffff;
+}
+
+.btn:hover::after {
+    /* scale pseudo-button in the X & Y planes */
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }
