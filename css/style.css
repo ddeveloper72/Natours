@@ -7,7 +7,10 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
+    /* capture any before and after pseudo-elements in universal selector */
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -30,7 +33,7 @@ body {
     line-height: 1.7;
     color: #777;
     padding: 3rem;
-
+    /* enable inheritance of box-sizing for later customization */
     box-sizing: border-box;
 }
 
