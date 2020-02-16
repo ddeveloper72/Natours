@@ -14,7 +14,13 @@ Dark green: #28b485
 }
 
 html {
-    font-size: 10px;
+    font-size: 62.5%;
+    /* 100% is a based on default 16px.  We prefer 10px */
+    /* so calculate the percentage 100/16 = 0.625 => 62.5% */
+    /* We can now use a function that will let a user change  */
+    /* the font-size to suit their needs. eg they may select size 20 */
+    /* and we give them .625*20 = 12.5px */
+    /* Note that rem doesn't work on sites written for IE9 or older. */
 }
 
 body {
