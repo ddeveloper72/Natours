@@ -1,0 +1,28 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Advanced CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddeveloper72/Natours.git"
+  },
+  "keywords": [
+    "Advanced",
+    "CSS",
+    "frontend",
+    "development"
+  ],
+  "author": "Duncan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddeveloper72/Natours/issues"
+  },
+  "homepage": "https://github.com/ddeveloper72/Natours#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
