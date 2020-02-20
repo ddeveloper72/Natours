@@ -1,99 +1,3 @@
-*,
-*::after,
-*::before {
-  /* capture any before and after pseudo-elements in universal selector */
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
-  /* 100% is a based on default 16px.  We prefer 10px */
-  /* so calculate the percentage 100/16 = 0.625 => 62.5% */
-  /* We can now use a function that will let a user change  */
-  /* the font-size to suit their needs. eg they may select size 20 */
-  /* and we give them .625*20 = 12.5px */
-  /* Note that rem doesn't work on sites written for IE9 or older. */
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  /* enable inheritance of box-sizing for later customization */
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.header {
-  height: 95vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(85, 197, 122, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  /* clip-path: polygon(x y, x y, x y, x y; */
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__text-box {
-  /* first align the text-box relative to the parent-body element... */
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  /* ...then move the element itself again relative to the fixed top, left x y position */
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  /* centre the button which is text */
-  text-align: center;
-}
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  margin-bottom: 6rem;
-}
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  -webkit-animation-name: moveInLeft;
-          animation-name: moveInLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.74rem;
-  -webkit-animation: moveInRight 1s ease-out;
-          animation: moveInRight 1s ease-out;
-}
-
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -188,8 +92,72 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
+*,
+*::after,
+*::before {
+  /* capture any before and after pseudo-elements in universal selector */
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  /* 100% is a based on default 16px.  We prefer 10px */
+  /* so calculate the percentage 100/16 = 0.625 => 62.5% */
+  /* We can now use a function that will let a user change  */
+  /* the font-size to suit their needs. eg they may select size 20 */
+  /* and we give them .625*20 = 12.5px */
+  /* Note that rem doesn't work on sites written for IE9 or older. */
+}
+
+body {
+  /* enable inheritance of box-sizing for later customization */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  -webkit-animation-name: moveInLeft;
+          animation-name: moveInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.74rem;
+  -webkit-animation: moveInRight 1s ease-out;
+          animation: moveInRight 1s ease-out;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+}
+
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -214,16 +182,23 @@ body {
   -webkit-transform: translateY(-0.3rem);
           transform: translateY(-0.3rem);
   /* x y blur colour with % opacity give the
-    look of the button up above base image */
+        look of the button up above base image */
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover::after {
+  /* scale pseudo-button in the X & Y planes */
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 
 .btn:active {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   /* reduce shadow size as well as the blur to give 
-    appearance of button moving close to base image */
+        appearance of button moving close to base image */
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
@@ -231,6 +206,10 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777;
+}
+
+.btn--white::after {
+  background-color: #fff;
 }
 
 .btn::after {
@@ -249,14 +228,63 @@ body {
   transition: all .4s;
 }
 
-.btn--white::after {
-  background-color: #fff;
+.header {
+  height: 95vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(85, 197, 122, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  /* clip-path: polygon(x y, x y, x y, x y; */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.btn:hover::after {
-  /* scale pseudo-button in the X & Y planes */
-  -webkit-transform: scaleX(1.4) scaleY(1.6);
-          transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+.header____logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header__text-box {
+  /* first align the text-box relative to the parent-body element... */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* ...then move the element itself again relative to the fixed top, left x y position */
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  /* centre the button which is text */
+  text-align: center;
+}
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) /2);
+  background-color: orangered;
+  float: left;
+}
+
+.row .col-1-of-2:not(:last-child) {
+  margin-right: 6rem;
 }
 /*# sourceMappingURL=main.css.map */
