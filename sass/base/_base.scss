@@ -16,3 +16,8 @@ html {
     /* and we give them .625*20 = 12.5px */
     /* Note that rem doesn't work on sites written for IE9 or older. */
 }
+
+body {
+    /* enable inheritance of box-sizing for later customization */
+    box-sizing: border-box;
+}
