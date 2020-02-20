@@ -1,0 +1,34 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
+        url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    /* clip-path: polygon(x y, x y, x y, x y; */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &____logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 3.5rem;
+    }
+
+    &__text-box {
+        /* first align the text-box relative to the parent-body element... */
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        /* ...then move the element itself again relative to the fixed top, left x y position */
+        transform: translate(-50%, -50%);
+        /* centre the button which is text */
+        text-align: center;
+    }
+}
