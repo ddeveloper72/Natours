@@ -25,3 +25,14 @@
         animation: moveInRight 1s ease-out;
     }
 }
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+    /* enable inheritance of box-sizing for later customization */
+    box-sizing: border-box;
+}
