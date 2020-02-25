@@ -45,4 +45,10 @@ body {
     -webkit-background-clip: text; 
     // make the text transparent so the background color can be visible
     color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    &:hover {
+        transform: skewY(2deg);
+    }
 }
