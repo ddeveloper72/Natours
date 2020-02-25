@@ -49,6 +49,8 @@ body {
     transition: all .2s;
 
     &:hover {
-        transform: skewY(2deg);
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        // x direction - y direction - 20px blur - color - transparency
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2)
     }
 }
