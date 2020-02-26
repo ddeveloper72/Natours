@@ -22,9 +22,20 @@
         }
 
         &--back {
-            background-color: blue;
             transform: rotateY(180deg);
             // rest state of card at start is 180deg
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+
+            &-2 {
+
+            }
+
+            &-3 {
+
+            }
         }
 
     }
