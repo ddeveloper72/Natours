@@ -7,8 +7,7 @@
     height: 50rem;
 
     &__side{
-        background-color: orangered;
-        color: #fff;
+        color: $color-white;
         font-size: 2rem;
         height: 50rem;
         transition: all .8s ease;
@@ -19,7 +18,7 @@
         backface-visibility: hidden;
 
         &--front {
-            background-color: orangered;
+            background-color: $color-white;
         }
 
         &--back {
