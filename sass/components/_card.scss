@@ -25,7 +25,7 @@
         }
 
         &--back {
-            transform: rotateY(180deg);
+            transform: rotateY(-180deg);
             // rest state of card at start is 180deg
 
             &-1 {
