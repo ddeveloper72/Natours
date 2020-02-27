@@ -67,11 +67,13 @@
         }
         
         &--2 {
-            background-image: url(../img/nat-5.jpg);
+            background-image: url(../img/nat-5.jpg),
+            linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
         }
         
         &--3 {
-            background-image: url(../img/nat-5.jpg);
+            background-image: url(../img/nat-5.jpg),
+            linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
         }
     }
     
