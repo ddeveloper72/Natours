@@ -1,4 +1,5 @@
 .card {
+    // functionality
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
@@ -53,6 +54,25 @@
     &:hover &__side--back {
         transform: rotateY(0);
         // rest state of card at start is 0deg
+    }
+    // front side styling
+    &__picture {
+        background-size: cover;
+        height: 25rem;
+        background-blend-mode: screen;
+
+        &--1 {
+            background-image: url(../img/nat-5.jpg),
+            linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        }
+        
+        &--2 {
+            background-image: url(../img/nat-5.jpg);
+        }
+        
+        &--3 {
+            background-image: url(../img/nat-5.jpg);
+        }
     }
     
 }
