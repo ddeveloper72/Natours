@@ -61,6 +61,7 @@
         background-size: cover;
         height: 25rem;
         background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100% );
 
         &--1 {
             background-image: url(../img/nat-5.jpg),
