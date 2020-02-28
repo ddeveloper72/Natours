@@ -389,11 +389,11 @@ body {
           perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem;
+  height: 52rem;
 }
 
 .card__side {
-  height: 50rem;
+  height: 52rem;
   -webkit-transition: all .8s ease;
   transition: all .8s ease;
   position: absolute;
@@ -500,9 +500,14 @@ body {
   background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
 }
 
+.card__details {
+  padding: 2rem;
+}
+
 .card__details ul {
   list-style: none;
   width: 80%;
+  margin: 0 auto;
 }
 
 .card__details ul li {
