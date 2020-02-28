@@ -140,4 +140,15 @@
         }
     }
 
+    &__cta {
+        // move top left most corner of the button box
+        // to the middle spot of the card.
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // nudge the button box so its centre is mid point over the
+        // absolute position above
+        transform: translate(-50%, -50%);
+    }
+
 }
