@@ -71,12 +71,12 @@
         }
 
         &--2 {
-            background-image: url(../img/nat-5.jpg),
+            background-image: url(../img/nat-6.jpg),
                 linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
         }
 
         &--3 {
-            background-image: url(../img/nat-5.jpg),
+            background-image: url(../img/nat-7.jpg),
                 linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
         }
     }
@@ -149,6 +149,8 @@
         // nudge the button box so its centre is mid point over the
         // absolute position above
         transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
     }
 
     &__price-box {
@@ -157,11 +159,14 @@
     }
 
     &__price-only {
-
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem;
     }
 
     &__price-value {
         font-size: 6rem;
+        color: $color-white;
         font-weight: 100;
 
         .fa .fas {
