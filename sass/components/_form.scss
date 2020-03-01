@@ -50,10 +50,10 @@
         transform: translateY(-4rem);
     }
 
-    &__group {
-        width: 55%;
-        float: left;
+    &__radio-group {
+        width: 49%;
         padding-left: 2.5rem;
+        display: inline-block;
     }
 
     &__radio-input {

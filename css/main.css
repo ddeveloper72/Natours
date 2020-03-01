@@ -706,10 +706,10 @@ body {
           transform: translateY(-4rem);
 }
 
-.form__group {
-  width: 55%;
-  float: left;
+.form__radio-group {
+  width: 49%;
   padding-left: 2.5rem;
+  display: inline-block;
 }
 
 .form__radio-input {
