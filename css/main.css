@@ -211,6 +211,14 @@ body {
   margin-bottom: 8rem;
 }
 
+.utility-margin-top-small {
+  margin-top: 2rem;
+}
+
+.utility-margin-top-med {
+  margin-top: 6rem;
+}
+
 .utility-margin-top-big {
   margin-top: 8rem;
 }
@@ -219,7 +227,7 @@ body {
   margin-top: 10rem;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -230,6 +238,8 @@ body {
   /* define button position for  btn-white::after */
   position: relative;
   font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
 
 .btn--animated {
@@ -257,13 +267,14 @@ body {
   opacity: 0;
 }
 
-.btn:active {
+.btn:active, .btn:focus {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   /* reduce shadow size as well as the blur to give 
         appearance of button moving close to base image */
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  outline: none;
 }
 
 .btn--white {
