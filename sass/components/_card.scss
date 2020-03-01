@@ -62,7 +62,7 @@
         background-size: cover;
         height: 25rem;
         background-blend-mode: screen;
-        --webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
         &--1 {
@@ -97,7 +97,7 @@
         padding: 1rem 1.5rem;
         // box clone treats the broken line of span text
         // as two individual lines of span text
-        --webkit-box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
 
         &--1 {
