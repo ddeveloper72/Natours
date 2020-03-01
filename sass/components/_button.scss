@@ -1,15 +1,20 @@
 .btn {
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem 4rem;
         display: inline-block;
-        border-radius: 5rem;
+        border-radius: $border-rad-large;
         transition: all .2s;
         /* define button position for  btn-white::after */
         position: relative;
         font-size: $default-font-size;
+
+        // Change for the <button> element
+        border: none;
+        cursor: pointer;
     }
     &--animated {
         /* animation timing and delay */
@@ -28,11 +33,13 @@
             opacity: 0;
         }
     }
-    &:active {
+    &:active,
+    &:focus {
         transform: translateY(-0.1rem);
         /* reduce shadow size as well as the blur to give 
         appearance of button moving close to base image */
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+        outline: none;
     }
     &--white {
         background-color: $color-white;
@@ -55,7 +62,7 @@
         display: inline-block;
         height: 100%;
         width: 100%;
-        border-radius: 5rem;
+        border-radius: $border-rad-large;
         position: absolute;
         top: 0;
         left: 0;
