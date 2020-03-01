@@ -5,10 +5,17 @@
     }
 
     &__input {
-
+        font-size: 1.5rem;
+        // input elements don't normally inherit font family
+        // so inheritance is specified
+        font-family: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: $border-rad-small;
+        background-color: rgba($color-white, .5);
+        border: none;
     }
 
     &__label {
-        
+
     }
 }
