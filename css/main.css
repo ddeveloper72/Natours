@@ -597,6 +597,8 @@ body {
 
 .story__image {
   height: 100%;
+  -webkit-transform: translateX(-4rem);
+          transform: translateX(-4rem);
 }
 
 .story__text {
@@ -608,12 +610,23 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, 30%);
+          transform: translate(-50%, 30%);
   color: #fff;
   text-transform: uppercase;
   font-size: 1.7rem;
   text-align: center;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.story:hover .story__caption {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .header {
