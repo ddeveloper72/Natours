@@ -463,9 +463,8 @@ body {
   background-size: cover;
   height: 25rem;
   background-blend-mode: screen;
-  --webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
 .card__picture--1 {
@@ -497,9 +496,8 @@ body {
 
 .card__heading-span {
   padding: 1rem 1.5rem;
-  --webkit-box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .card__heading-span--1 {
@@ -651,9 +649,8 @@ body {
   background-position: top;
   position: relative;
   /* clip-path: polygon(x y, x y, x y, x y; */
-  --webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .header____logo-box {
