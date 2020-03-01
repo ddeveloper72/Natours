@@ -3,7 +3,7 @@
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
     background-color: rgba($color-white, .4);
-    border-radius: 3px;
+    border-radius: $border-rad-small;
     padding: 6rem;
     // 6rem + 3rem
     // using 7rem because a line appears during hover at 9rem
