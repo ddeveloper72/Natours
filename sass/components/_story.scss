@@ -7,8 +7,7 @@
     padding: 6rem;
     // 6rem + 3rem
     // using 7rem because a line appears during hover at 9rem
-    // note that when text extends around the circle, it appears again on hover
-    padding-left: 7rem;
+    padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
@@ -69,5 +68,7 @@
     &:hover &__image {
         transform: translateX(-4rem) scale(1);
         filter: blur(3px) brightness(80%);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
 }
