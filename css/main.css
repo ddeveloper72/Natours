@@ -576,7 +576,7 @@ body {
   background-color: #fff;
   border-radius: 3px;
   padding: 6rem;
-  padding-left: 9rem;
+  padding-left: 7rem;
   font-size: 1.6rem;
   -webkit-transform: skewX(-12deg);
           transform: skewX(-12deg);
@@ -585,7 +585,6 @@ body {
 .story__shape {
   width: 15rem;
   height: 15rem;
-  background-color: orangered;
   float: left;
   shape-outside: circle(50% at 50% 50%);
   -webkit-clip-path: circle(50% at 50% 50%);
@@ -593,12 +592,18 @@ body {
   -webkit-transform: translateX(-3rem) skewX(12deg);
           transform: translateX(-3rem) skewX(12deg);
   position: relative;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .story__image {
   height: 100%;
-  -webkit-transform: translateX(-4rem);
-          transform: translateX(-4rem);
+  -webkit-transform: translateX(-4rem) scale(1.4);
+          transform: translateX(-4rem) scale(1.4);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .story__text {
@@ -620,13 +625,20 @@ body {
   -webkit-transition: all .5s;
   transition: all .5s;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .story:hover .story__caption {
   opacity: 1;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.story:hover .story__image {
+  -webkit-transform: translateX(-4rem) scale(1);
+          transform: translateX(-4rem) scale(1);
+  -webkit-filter: blur(3px) brightness(80%);
+          filter: blur(3px) brightness(80%);
 }
 
 .header {

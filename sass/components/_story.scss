@@ -6,14 +6,15 @@
     border-radius: 3px;
     padding: 6rem;
     // 6rem + 3rem
-    padding-left: 9rem;
+    // using 7rem because a line appears during hover at 9rem
+    // note that when text extends around the circle, it appears again on hover
+    padding-left: 7rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
     &__shape {
         width: 15rem;
         height: 15rem;
-        background-color: orangered;
         float: left;
         // diameter is 50% of the width
         // this element has to be floated, have width & height
@@ -26,11 +27,17 @@
         transform: translateX(-3rem) skewX(12deg);
         //required for caption
         position: relative;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
 
     &__image {
         height: 100%;
-        transform: translateX(-4rem);
+        transform: translateX(-4rem) scale(1.4);
+        // removes 
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transition: all .5s;
     }
 
     &__text {
@@ -49,11 +56,18 @@
         text-align: center;
         opacity: 0;
         transition: all .5s;
+        // removes the image animation glitching at the end of animation
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
 
     &:hover &__caption {
         opacity: 1;
         transform: translate(-50%, -50%);
+    }
+
+    &:hover &__image {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
     }
 }
