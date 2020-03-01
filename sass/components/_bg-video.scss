@@ -6,4 +6,14 @@
     width: 100%;
     z-index: -1;
     opacity: .15;
+    // use if the video/image overflows the section
+    overflow: hidden;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        // works with html elements, the video
+        // which works the same ways as background-image cover
+        object-fit: cover;
+    }
 }
