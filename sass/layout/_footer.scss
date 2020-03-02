@@ -2,6 +2,7 @@
     background-color: $color-grey-dark-3;
     padding: 10rem 0;
     font-size: 1.4rem;
+    color: $color-grey-light-1;
 
     &__logo-box {
         text-align: center;
@@ -50,5 +51,12 @@
             box-shadow: 0 2rem 2rem rgba($color-black, .2);
             transform: rotate(5deg) scale(1.3);
         }
+    }
+
+    &__copyright {
+        border-top: 1px solid $color-grey-dark;
+        padding-top: 2rem;
+        width: 80%;
+        float: right;
     }
 }
