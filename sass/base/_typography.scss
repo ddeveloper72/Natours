@@ -43,6 +43,7 @@ body {
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     // clip the background color to the same template as the text
     -webkit-background-clip: text; 
+    background-clip: text; 
     // make the text transparent so the background color can be visible
     color: transparent;
     letter-spacing: .2rem;
