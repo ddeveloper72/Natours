@@ -14,6 +14,7 @@
         top: 6rem;
         right: 6rem;
         z-index: 200;
+        box-shadow: 0 1rem 3rem ($color-black, .1);
     }
 
     &__background {
@@ -26,16 +27,18 @@
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 100;
 
-        transform: scale(80);
+        // transform: scale(80);
     }
 
     &__nav {
         height: 100vh;
-        width: 100vw;
         position: fixed;
         top: 0;
         right: 0;
         z-index: 150;
+
+        opacity: 0;
+        width: 0;
 
     }
 
@@ -81,5 +84,9 @@
             transform: translateX(1rem);
         }
 
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
     }
 }
