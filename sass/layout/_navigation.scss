@@ -47,8 +47,17 @@
 
     }
 
-    &__link {
+    &__item {
+        margin: 1rem;
 
+    }
+
+    &__link {
+        font-size: 3rem;
+        font-weight: 300;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
 
     }
 }
