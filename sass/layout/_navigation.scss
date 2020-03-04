@@ -149,12 +149,16 @@
         background-color: transparent;
     }
 
+    // move the before and after pseudo span element to the same position.
     &__checkbox:checked + &__button &__icon::before {
-        transform: rotate(45deg);
+        top: 0;
+        // improve rotation appearance: 180deg -45;
+        transform: rotate(135deg); 
     }
 
     &__checkbox:checked + &__button &__icon::after {
-        transform: rotate(-45deg);
+        top: 0;
+        transform: rotate(-135deg);
     }
 
 }
