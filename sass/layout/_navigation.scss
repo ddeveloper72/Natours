@@ -137,10 +137,24 @@
     
     &__button:hover &__icon::before {
         top: -1rem;
+    }
     
     &__button:hover &__icon::after {
         top: 1rem;
     }
         
+    // select the child of the element adjacent to the checkbox
+    // ie select icon which is child of button that is the sibling of checkbox
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        transform: rotate(45deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        transform: rotate(-45deg);
+    }
 
 }
