@@ -36,8 +36,14 @@
         width: 100%;
     }
     &__text {
-        font-size: 1.4rem;
+        font-size: 1.4rem; //14px
         padding-bottom: 4rem;
 
+        column-count: 2;
+        column-gap: 4rem; // default is 1em which is the default font size for the current element, 14px
+        -webkit-column-rule: 1px $color-grey-dark-2;
+        column-rule: 1px $color-grey-light-2;
+
+        hyphens: auto;
     }
 }
