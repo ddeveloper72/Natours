@@ -17,6 +17,7 @@
         box-shadow: 0 1rem 3rem ($color-black, .1);
         //center the navigation span lines
         text-align: center;
+        cursor: pointer;
     }
 
     &__background {
@@ -122,6 +123,7 @@
             content: "";
             position: absolute;
             left: 0;
+            transition: all .2s;
         }
 
         &::before {
@@ -130,5 +132,15 @@
         &:after {
             top: .8rem;
         }
+
     }
+    
+    &__button:hover &__icon::before {
+        top: -1rem;
+    
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+        
+
 }
