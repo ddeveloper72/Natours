@@ -1,5 +1,5 @@
 .navigation {
-
+    
     &__checkbox {
         display: none;
 
@@ -26,6 +26,8 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 100;
+        // cubic-bezier chosen was easeInOutQuint from https://easings.net/
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
         // transform: scale(80);
     }
@@ -39,6 +41,7 @@
 
         opacity: 0;
         width: 0;
+        transition: all 2s cubic-bezier(1, .44, .68, 1.19);
 
     }
 
@@ -47,6 +50,7 @@
         @include center;
         list-style: none;
         text-align: center;
+        width: 100%;
 
     }
 
@@ -88,5 +92,10 @@
 
     &__checkbox:checked ~ &__background {
         transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
     }
 }
