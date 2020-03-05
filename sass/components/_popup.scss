@@ -15,6 +15,26 @@
         visibility: visible;
     }
 
+    &__close {
+        &:link,
+        &:visited {
+            color: $color-grey-dark-3;
+            position: absolute;
+            right: 2.5rem;
+            top: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transform: all .2s;
+            // specify the line height to remove default line height around text element
+            line-height: 1;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
 
     &__content {
         @include absCenter;
