@@ -8,34 +8,9 @@
     z-index: 300;
     opacity: 0;
     visibility: hidden;
-    transition: all .3s;
+    transition: all .3s;   
 
-    &:target {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    &__close {
-        &:link,
-        &:visited {
-            color: $color-grey-dark-3;
-            position: absolute;
-            right: 2.5rem;
-            top: 2.5rem;
-            font-size: 3rem;
-            text-decoration: none;
-            display: inline-block;
-            transform: all .2s;
-            // specify the line height to remove default line height around text element
-            line-height: 1;
-        }
-
-        &:hover {
-            color: $color-primary;
-        }
-    }
-
-
+    // CLOSED STATE OF THE POPUP
     &__content {
         @include absCenter;
         width: 75%;
@@ -46,6 +21,10 @@
         // define the space as a table so it can be aligned
         display: table;
         overflow: hidden;
+        opacity: 0;
+        transform: translate (-50% , -50%) scale(0);
+        // add a .3s delay to the transition so the background appears for longer
+        transition: all .5s .2s;
     }
 
     &__left {
@@ -86,5 +65,37 @@
         -ms-hyphens: auto;
         -moz-hyphens: auto;
         hyphens: auto;
+    }
+
+    // OPEN STATES REVERSE THE CLOSED STATE OF THE POPUP
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__close {
+
+        &:link,
+        &:visited {
+            color: $color-grey-dark-3;
+            position: absolute;
+            right: 2.5rem;
+            top: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transform: all .2s;
+            // specify the line height to remove default line height around text element
+            line-height: 1;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
     }
 }
