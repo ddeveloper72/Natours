@@ -18,3 +18,33 @@
     left: 50%;
     transform: translate(-50%, -50%)
 }
+
+//MEDIA QUERY MANAGER   
+
+/*
+   0 - 600px: phone
+ 600 - 900px: tablet prorate
+ 900 - 1200px: Tablet landscape
+1200 - 1800px: normal styles written without media queries
+1800px+ - large desktops
+
+*/
+
+@mixin respond-phone {
+    @media (max-width: 600px) {@content};
+}
+
+// $breakpoint argument choices:
+// - phone
+// - tab-port
+// - tab-land
+// - big-desktop
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 600px) { @content };
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 900px) { @content };
+    }
+}
