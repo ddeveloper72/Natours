@@ -36,6 +36,7 @@ So now the information about the CSS variables, use of certain styles in a certa
 
 Here's a sample sass folder
 
+``` SCSS
 .
 ├──sass
     ├── abstracts
@@ -58,6 +59,8 @@ Here's a sample sass folder
     ├── pages
     |     └── _home.scss
     └── main.scss
+
+```
 
 This is what a _variables.scss may look like:
 
