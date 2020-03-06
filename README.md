@@ -36,3 +36,141 @@ So now the information about the CSS variables, use of certain styles in a certa
 
 Here's a sample sass folder
 
+.
+├──sass
+    ├── abstracts
+    |     ├── _variables.scss
+    |     └── _mixins.scss
+    ├── base
+    |     ├── _animations.scss
+    |     ├── _typography.scss
+    |     └── _utilities.scss
+    ├── components
+    |     ├── _button.scss
+    |     ├── _card.scss
+    |     ├── _form.scss
+    |     └── _popup.scss
+    ├── layout
+    |     ├── _header.scss
+    |     ├── _grid.scss
+    |     ├── _footer.scss
+    |     └── _navigation.scss
+    ├── pages
+    |     └── _home.scss
+    └── main.scss
+
+This is what a _variables.scss may look like:
+
+``` SCSS
+// COLOUR
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+$color-white: #fff;
+$color-black: #000;
+
+// FONT
+$default-font-size: 1.6rem;
+
+// GRID
+$grid-with: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+//BORDER RADIUS
+$border-rad-small: .3rem;
+$border-rad-large: 5rem;
+
+```
+
+Sample mixin
+
+``` SCSS
+// CLEARFIX
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// POSITION ABSOLUTE CENTER
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+```
+
+Sample typography
+(note how a colour is referenced by using the name which is filed separately)
+
+``` SCSS
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.74rem;
+
+        animation: moveInRight 1s ease-out;
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+}
+
+```
+
+Don't forget the main.scss, in which one has to specify all the scss source files
+
+``` SCSS
+
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/card";
+@import "components/form";
+@import "components/popup";
+
+@import "layout/header";
+@import "layout/grid";
+@import "layout/footer";
+@import "layout/navigation";
+
+@import "pages/home";
+
+```
+
+![WIP](https://github.com/ddeveloper72/Natours/blob/master/img/wip.png "More to follow Work in Progress...")
