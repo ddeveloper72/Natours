@@ -12,11 +12,18 @@
 
 .utility-bottom-medium {
     margin-bottom: 4rem;
+    @include respond(tab-port) {
+        margin-bottom: 3rem;
+    }
 }
 
 .utility-bottom-large {
     margin-bottom: 8rem;
+    @include respond(tab-port) {
+        margin-bottom: 5rem;
+    }
 }
+
 .utility-margin-top-small {
     margin-top: 2rem;
 }
@@ -28,6 +35,7 @@
 .utility-margin-top-big {
     margin-top: 8rem;
 }
+
 .utility-margin-top-large {
     margin-top: 10rem;
 }
