@@ -1,3 +1,20 @@
+/*
+   0 - 600px: phone
+ 600 - 900px: tablet prorate
+ 900 - 1200px: Tablet landscape
+1200 - 1800px: normal styles written without media queries
+1800px+ - large desktops
+
+ $breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- large-desktop
+- 1em - 16px  px/16px = em
+
+ORDER: base and typography > general layout & grid layout > page layout & components
+
+*/
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -14,7 +31,6 @@
             transform: translate(0);
   }
 }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -110,6 +126,18 @@ html {
   /* the font-size to suit their needs. eg they may select size 20 */
   /* and we give them .625*20 = 12.5px */
   /* Note that rem doesn't work on sites written for IE9 or older. */
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
