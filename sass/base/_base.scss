@@ -8,16 +8,35 @@
 }
 
 html {
-    font-size: 62.5%;
+        font-size: 62.5%; // this is also what 1rem is.
     /* 100% is a based on default 16px.  We prefer 10px */
     /* so calculate the percentage 100/16 = 0.625 => 62.5% */
     /* We can now use a function that will let a user change  */
     /* the font-size to suit their needs. eg they may select size 20 */
     /* and we give them .625*20 = 12.5px */
     /* Note that rem doesn't work on sites written for IE9 or older. */
+
+    // media queries are applied largest to smallest
+    // where queries conflict, the last one will apply
+    @include respond(tab-land) { // width <1200px
+        font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+    }
+    
+    @include respond(tab-port) { // width <900px
+        font-size: 50%; // 1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(large-desktop) {
+        font-size: 75%; //1rem = 12px, 12/16 = 75%
+    }
 }
 
 body {
     /* enable inheritance of box-sizing for later customization */
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }
