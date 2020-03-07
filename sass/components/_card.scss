@@ -171,18 +171,23 @@
         font-weight: 100;
     }
 
+    
+    
     @include respond (tab-port) {
         height: auto;
+        border-radius: $border-rad-small;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
         &__side {
             height: auto;
-            transition: all .8s ease;
             position: relative;
-            border-radius: $border-rad-small;
+            box-shadow: none;
 
             &--back {
                 transform: rotateY(0);
                 // rest state of card at start is 180deg
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
             }
 
         }
@@ -193,24 +198,25 @@
             // rest state of card at start is 0deg
         }
 
+        &__details {
+            padding: 1rem 3rem;
+        }
+
         &__cta {
             position: relative;
             top: 0;
             left: 0;
             transform: translate(0);
             width: 100%;
+            padding: 4rem 7rem 4rem 4rem;
         }
 
         &__price-box {
-            margin-bottom: 8rem;
-        }
-
-        &__price-only {
-            margin-bottom: 8rem;
+            margin-bottom: 3rem;
         }
 
         &__price-value {
-            font-size: 6rem;
+            font-size: 4rem;
         }
     }
 
