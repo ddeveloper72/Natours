@@ -886,6 +886,12 @@ body {
   color: #999;
 }
 
+@media (max-width: 56.25em) {
+  .form__input {
+    width: 100%;
+  }
+}
+
 .form__label {
   font-size: 1.2rem;
   font-weight: 700;
@@ -906,6 +912,13 @@ body {
   width: 49%;
   padding-left: 2.5rem;
   display: inline-block;
+}
+
+@media (max-width: 56.25em) {
+  .form__radio-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 
 .form__radio-input {
