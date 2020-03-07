@@ -1017,16 +1017,6 @@ body {
   }
 }
 
-@media (max-width: 37.5em) {
-  .popup__left {
-    width: 100%;
-    display: inline-block;
-  }
-  .popup__left::first-line {
-    padding-top: 1rem;
-  }
-}
-
 .popup__right {
   width: 66.666667%;
   display: table-cell;

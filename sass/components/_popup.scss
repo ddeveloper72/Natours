@@ -9,7 +9,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
-  
+
 
     // CLOSED STATE OF THE POPUP
     &__content {
@@ -23,7 +23,7 @@
         display: table;
         overflow: hidden;
         opacity: 0;
-        transform: translate (-50% , -50%) scale(0);
+        transform: translate (-50%, -50%) scale(0);
         // add a .3s delay to the transition so the background appears for longer
         transition: all .5s .2s;
 
@@ -41,6 +41,7 @@
             width: 100%;
             display: inline-block;
         }
+    }
 
     &__right {
         width: 66.666667%;
@@ -68,6 +69,7 @@
             overflow: hidden;
         }
     }
+
     &__text {
         font-size: 1.4rem; //14px
         padding-bottom: 4rem;
@@ -77,11 +79,11 @@
         -webkit-column-count: 2;
         column-count: 2;
 
-        -webkit-column-gap: 4rem; 
-        -ms-column-gap: 4rem; 
-        -moz-column-gap: 4rem; 
+        -webkit-column-gap: 4rem;
+        -ms-column-gap: 4rem;
+        -moz-column-gap: 4rem;
         column-gap: 4rem; // default is 1em which is the default font size for the current element, 14px
-        
+
         -webkit-column-rule: 1px $color-grey-dark-2;
         -ms-column-rule: 1px $color-grey-dark-2;
         -moz-column-rule: 1px $color-grey-dark-2;
@@ -96,6 +98,7 @@
             width: 100%;
         }
     }
+
 
     // OPEN STATES REVERSE THE CLOSED STATE OF THE POPUP
     &:target {
