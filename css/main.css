@@ -671,6 +671,7 @@ body {
 }
 
 .card__price-box {
+  margin-bottom: 8rem;
   font-size: 1.4rem;
   text-transform: uppercase;
 }
@@ -687,8 +688,42 @@ body {
   font-weight: 100;
 }
 
-.card__price-value .fa .fas {
-  font-weight: 200;
+@media (max-width: 56.25em) {
+  .card {
+    height: auto;
+  }
+  .card__side {
+    height: auto;
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+    position: relative;
+    border-radius: 0.3rem;
+  }
+  .card__side--back {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  .card:hover .card__side--front {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  .card__cta {
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    width: 100%;
+  }
+  .card__price-box {
+    margin-bottom: 8rem;
+  }
+  .card__price-only {
+    margin-bottom: 8rem;
+  }
+  .card__price-value {
+    font-size: 6rem;
+  }
 }
 
 .story {
