@@ -357,8 +357,13 @@
         <div class="popup" id="popup">
             <div class="popup__content">
                 <div class="popup__left">
-                    <img src="img/nat-8.jpg" alt="Tour poto" class="popup__img">
-                    <img src="img/nat-9.jpg" alt="Tour poto" class="popup__img">
+                    <img srcset="img/nat-8-small.jpg 300w, img/nat-8.jpg 1000w"
+                        sizes="(max-width:900px) 20vw, (max-width:600px) 30vw, 300px" alt="Photo 1"
+                        class="popup__img" src="img/nat-8.jpg">
+
+                    <img srcset="img/nat-9-small.jpg 300w, img/nat-9.jpg 1000w"
+                        sizes="(max-width:900px) 20vw, (max-width:600px) 30vw, 300px" alt="Photo 2" 
+                        class="popup__img" src="img/nat-9.jpg">
                 </div>
                 <div class="popup__right">
                     <a href="#section-tours" class="popup__close">&times;</a>
