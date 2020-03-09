@@ -3,10 +3,17 @@
     background-image: linear-gradient(to right bottom,
             rgba($color-primary-light, 0.8),
             rgba($color-primary-dark, 0.8)),
-        url(../img/hero.jpg);
+        url(../img/hero-small.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
+
+    @media (min-resolution: 192dpi) {
+        background-image: linear-gradient(to right bottom,
+            rgba($color-secondary-light, 0.8),
+            rgba($color-secondary-dark, 0.8)),
+        url(../img/hero.jpg);
+    }
 
     /* clip-path: polygon(x y, x y, x y, x y; */
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
