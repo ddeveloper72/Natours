@@ -25,13 +25,7 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        // diameter is 50% of the width
-        // this element has to be floated, have width & height
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+        border-radius: 50%;
         // skewX used to manually reverse the -X skew value of the story
         transform: translateX(-3rem) skewX(12deg);
         //required for caption
@@ -39,6 +33,17 @@
         overflow: hidden;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+
+        @supports (clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+            /* clip-path: polygon(x y, x y, x y, x y; */
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            // diameter is 50% of the width
+            // this element has to be floated, have width & height
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
 
         @include respond (phone) {
             transform: translateX(-3rem) skewX(0);
